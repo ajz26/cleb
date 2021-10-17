@@ -47,11 +47,6 @@ class AppsController extends Controller
     }
 
     // User List Page
-    public function user_list()
-    {
-        $pageConfigs = ['pageHeader' => false];
-        return view('/content/apps/user/app-user-list', ['pageConfigs' => $pageConfigs]);
-    }
 
     // User View Page
     public function user_view()

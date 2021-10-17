@@ -138,6 +138,7 @@ return [
     "agGrid Table" => "agGrid Table",
     "User Settings" => "User Settings",
     "User" => "User",
+    "Users" => "Users",
     "List" => "List",
     "View" => "View",
     "Edit" => "Edit",
@@ -180,5 +181,14 @@ return [
     "Verify Email" => "Verify Email",
     "Deactivate Account" => "Deactivate Account",
     "Promotional" => "Promotional",
-    "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops."
+    "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops.",
+
+    // 
+    "Administration" => "Administration",
+    "Orders" => "Orders",
+    "Clebs" => "Clebs",
+    "Change Password" => "Change Password",
+    "All clebs" => "All clebs",
+    "Categories" => "Categories",
+    "Tags" => "Tags",
 ];

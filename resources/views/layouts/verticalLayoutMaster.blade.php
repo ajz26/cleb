@@ -40,8 +40,36 @@
       @if($configData['pageHeader'] === true && isset($configData['pageHeader']))
       @include('panels.breadcrumb')
       @endif
-
+      
       <div class="content-body">
+
+        @if (session('status'))
+            <div class="alert alert-success alert-success fade show" role="alert">
+              <div class="alert-body">
+                {{ session('status') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+        @endif
+
+        @if(count($errors) > 0)
+            <div class="p-1">
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-warning alert-danger fade show" role="alert">
+                        <div class="alert-body">
+
+                          {{$error}}
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
         {{-- Include Page Content --}}
         @yield('content')
       </div>
@@ -51,17 +79,12 @@
   </div>
   <!-- End: Content-->
 
-  @if($configData['blankPage'] == false && isset($configData['blankPage']))
-  @include('content/pages/customizer')
-
-  @include('content/pages/buy-now')
-  @endif
-
   <div class="sidenav-overlay"></div>
   <div class="drag-target"></div>
 
   {{-- include footer --}}
   @include('panels/footer')
+  @routes
 
   {{-- include default scripts --}}
   @include('panels/scripts')

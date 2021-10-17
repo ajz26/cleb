@@ -9,38 +9,27 @@ class Helper
 {
     public static function applClasses()
     {
-        // Demo
-        $fullURL = request()->fullurl();
-        if (App()->environment() === 'production') {
-            for ($i = 1; $i < 7; $i++) {
-                $contains = Str::contains($fullURL, 'demo-' . $i);
-                if ($contains === true) {
-                    $data = config('custom.' . 'demo-' . $i);
-                }
-            }
-        } else {
-            $data = config('custom.custom');
-        }
+        $data = config('custom.custom');
 
         // default data array
         $DefaultData = [
-            'mainLayoutType' => 'vertical',
-            'theme' => 'light',
-            'sidebarCollapsed' => false,
-            'navbarColor' => '',
-            'horizontalMenuType' => 'floating',
-            'verticalMenuNavbarType' => 'floating',
-            'footerType' => 'static', //footer
-            'layoutWidth' => 'boxed',
-            'showMenu' => true,
-            'bodyClass' => '',
-            'bodyStyle' => '',
-            'pageClass' => '',
-            'pageHeader' => true,
-            'contentLayout' => 'default',
-            'blankPage' => false,
-            'defaultLanguage' => 'en',
-            'direction' => env('MIX_CONTENT_DIRECTION', 'ltr'),
+            'mainLayoutType'        => 'vertical',
+            'theme'                 => 'light',
+            'sidebarCollapsed'      => false,
+            'navbarColor'           => '',
+            'horizontalMenuType'    => 'floating',
+            'verticalMenuNavbarType'=> 'floating',
+            'footerType'            => 'static', //footer
+            'layoutWidth'           => 'boxed',
+            'showMenu'              => true,
+            'bodyClass'             => '',
+            'bodyStyle'             => '',
+            'pageClass'             => '',
+            'pageHeader'            => true,
+            'contentLayout'         => 'default',
+            'blankPage'             => false,
+            'defaultLanguage'       => 'es',
+            'direction'             => env('MIX_CONTENT_DIRECTION', 'ltr'),
         ];
 
         // if any key missing of array from custom.php file it will be merge and set a default value from dataDefault array and store in data variable
